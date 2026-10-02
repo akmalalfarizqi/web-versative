@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versative Digital Solutions</title>
+    <meta name="description" content="Versative Digital Solutions: pionir solusi IT dan industri kreatif. Layanan broadcasting, animasi, desain komunikasi visual, rekayasa perangkat lunak, teknik komputer dan jaringan, serta game development.">
+    <meta name="theme-color" content="#912B8F">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fonts/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
+
+    <!-- NAVBAR -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md navbar-versative" aria-label="Navigasi utama">
+            <div class="container-fluid px-3 px-md-4">
+                <a class="navbar-brand" href="#home">
+                    <img src="assets/img/logo-nav.png" alt="Versative Digital Solutions" class="brand-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Buka menu">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                    <ul class="navbar-nav gap-md-3 gap-lg-4 pe-md-3">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services &amp; Pricelist</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME -->
+        <section id="home" class="hero">
+            <div class="container-xl">
+                <div class="row align-items-center g-4 g-md-5">
+                    <div class="col-md-7 order-2 order-md-1">
+                        <h1 class="hero-title">Versative Digital Solutions</h1>
+                        <p class="hero-lead">
+                            Kami menjadi pionir solusi IT dan industri kreatif yang dinamis serta menyediakan layanan yang bervariasi dengan pendekatan riset mendalam serta kolaborasi kuat demi menciptakan produk yang serbaguna (versatile) dan relevan dengan kebutuhan market sekarang.
+                        </p>
+                    </div>
+                    <div class="col-md-5 order-1 order-md-2 text-center">
+                        <img src="assets/img/logo-hero.png" alt="Logo Versative Digital Solutions" class="hero-logo" width="415" height="415">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section section-gradient">
+            <div class="container-xl">
+                <h2 class="section-title text-white text-center">About Us</h2>
+                <div class="row g-3 g-lg-4 align-items-start">
+                    <div class="col-lg-5">
+                        <article class="info-card">
+                            <h3 class="info-heading">VISI :</h3>
+                            <p class="mb-0">
+                                Menjadi perusahaan yang dinamis, adaptif, inovatif, dan kolaboratif dalam menghasilkan berbagai solusi teknologi informasi serta karya industri kreatif yang berkarakter dan profesional di bidang teknologi informasi dan komunikasi.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-lg-7">
+                        <article class="info-card">
+                            <h3 class="info-heading">MISI :</h3>
+                            <ol class="mission-list mb-0">
+                                <li>Menumbuhkan etos kerja profesional, semangat kolaboratif tim, keberlanjutan pembelajaran, serta literasi digital yang berlandaskan integritas dan nilai religius</li>
+                                <li>Menghasilkan berbagai karya yang inovatif, adaptif, dan serbaguna (versatile) yang selalu relevan dengan perkembangan tren industri kreatif melalui pemanfaatan teknologi modern</li>
+                                <li>Menjalin kerja sama yang dinamis dengan komunitas, sekolah, maupun usaha lokal maupun profesional untuk menghasilkan produk serta layanan yang relevan dengan kebutuhan pasar (market) sekarang</li>
+                                <li>Menerapkan pendekatan riset dan pemahaman mendalam secara adaptif dalam setiap pengembangan proyek agar mampu menciptakan solusi yang tepat sasaran, inovatif, dan bernilai</li>
+                            </ol>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES & PRICELIST -->
+        <section id="services" class="section">
+            <div class="container-xl text-center">
+                <h2 class="section-title">Services &amp; Pricelist</h2>
+                <button type="button" class="poster-btn" data-bs-toggle="modal" data-bs-target="#posterModal" aria-label="Perbesar poster pricelist">
+                    <img src="assets/img/poster-pricelist-900.jpg" alt="Poster layanan dan daftar harga Versative Digital Solutions" class="poster-img" width="900" height="1273" loading="lazy">
+                    <span class="poster-hint"><i class="bi bi-zoom-in"></i> Klik untuk memperbesar</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="section">
+            <div class="container-xl">
+                <h2 class="section-title text-center">Portfolio</h2>
+
+                <!--
+                    Ganti href="#" dengan link Google Drive masing-masing kategori.
+                    Untuk thumbnail, isi variabel --thumb, contoh:
+                    style="--thumb: url('assets/img/portfolio/animation.jpg')"
+                -->
+                <div class="pf-grid">
+                    <article class="pf-card pf-animation" style="--thumb: none">
+                        <i class="bi bi-vector-pen pf-icon" aria-hidden="true"></i>
+                        <h3 class="pf-title">ANIMATION</h3>
+                        <a href="#" class="drive-btn" target="_blank" rel="noopener">
+                            <span>Open with Google Drive</span>
+                            <svg class="drive-ico" viewBox="0 0 87.3 78" aria-hidden="true"><use href="#drive-shape"/></svg>
+                        </a>
+                    </article>
+
+                    <article class="pf-card pf-broadcasting" style="--thumb: none">
+                        <i class="bi bi-broadcast pf-icon" aria-hidden="true"></i>
+                        <h3 class="pf-title">BROADCASTING</h3>
+                        <a href="#" class="drive-btn" target="_blank" rel="noopener">
+                            <span>Open with Google Drive</span>
+                            <svg class="drive-ico" viewBox="0 0 87.3 78" aria-hidden="true"><use href="#drive-shape"/></svg>
+                        </a>
+                    </article>
+
+                    <article class="pf-card pf-vcd" style="--thumb: none">
+                        <i class="bi bi-palette pf-icon" aria-hidden="true"></i>
+                        <h3 class="pf-title">VCD</h3>
+                        <a href="#" class="drive-btn" target="_blank" rel="noopener">
+                            <span>Open with Google Drive</span>
+                            <svg class="drive-ico" viewBox="0 0 87.3 78" aria-hidden="true"><use href="#drive-shape"/></svg>
+                        </a>
+                    </article>
+
+                    <article class="pf-card pf-software" style="--thumb: none">
+                        <i class="bi bi-code-slash pf-icon" aria-hidden="true"></i>
+                        <h3 class="pf-title">IT-SOFTWARE</h3>
+                        <a href="#" class="drive-btn" target="_blank" rel="noopener">
+                            <span>Open with Google Drive</span>
+                            <svg class="drive-ico" viewBox="0 0 87.3 78" aria-hidden="true"><use href="#drive-shape"/></svg>
+                        </a>
+                    </article>
+
+                    <article class="pf-card pf-network" style="--thumb: none">
+                        <i class="bi bi-hdd-network pf-icon" aria-hidden="true"></i>
+                        <h3 class="pf-title">IT-NETWORK</h3>
+                        <a href="#" class="drive-btn" target="_blank" rel="noopener">
+                            <span>Open with Google Drive</span>
+                            <svg class="drive-ico" viewBox="0 0 87.3 78" aria-hidden="true"><use href="#drive-shape"/></svg>
+                        </a>
+                    </article>
+
+                    <article class="pf-card pf-game" style="--thumb: none">
+                        <i class="bi bi-controller pf-icon" aria-hidden="true"></i>
+                        <h3 class="pf-title">GAME DEV</h3>
+                        <a href="#" class="drive-btn" target="_blank" rel="noopener">
+                            <span>Open with Google Drive</span>
+                            <svg class="drive-ico" viewBox="0 0 87.3 78" aria-hidden="true"><use href="#drive-shape"/></svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section">
+            <div class="container-xl">
+                <h2 class="section-title text-center">Contact Us</h2>
+
+                <!-- Ganti data-wa-number dengan nomor WhatsApp (format 62, tanpa + dan spasi) -->
+                <form id="contactForm" class="contact-card" data-wa-number="628179131209" novalidate>
+                    <div class="mb-2">
+                        <label for="nama" class="form-label">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" class="form-control" autocomplete="name" required>
+                        <div class="invalid-feedback">Nama lengkap wajib diisi.</div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" autocomplete="email" required>
+                        <div class="invalid-feedback">Masukkan alamat email yang valid.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pesan" class="form-label">Pesan</label>
+                        <textarea id="pesan" name="pesan" class="form-control" rows="9" required></textarea>
+                        <div class="invalid-feedback">Pesan wajib diisi.</div>
+                    </div>
+                    <button type="submit" class="btn btn-wa w-100">
+                        <span>Send via WhatsApp</span>
+                        <i class="bi bi-whatsapp"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="mb-0">Copyright Versative 2026. All Rights Reserved</p>
+    </footer>
+
+    <!-- Modal poster -->
+    <div class="modal fade" id="posterModal" tabindex="-1" aria-label="Poster pricelist" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content poster-modal">
+                <button type="button" class="btn-close poster-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                <img src="assets/img/poster-pricelist-1800.jpg" alt="Poster layanan dan daftar harga Versative Digital Solutions (ukuran penuh)" class="img-fluid" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- Bentuk logo Google Drive (dipakai ulang oleh tombol portfolio) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <g id="drive-shape">
+                <path fill="#0066da" d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z"/>
+                <path fill="#00ac47" d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0-1.2 4.5h27.5z"/>
+                <path fill="#ea4335" d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z"/>
+                <path fill="#00832d" d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z"/>
+                <path fill="#2684fc" d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z"/>
+                <path fill="#ffba00" d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z"/>
+            </g>
+        </defs>
+    </svg>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
