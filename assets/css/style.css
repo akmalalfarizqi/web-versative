@@ -1,0 +1,439 @@
+/* ==========================================================
+   Versative Digital Solutions - Company Profile
+   ========================================================== */
+
+:root {
+    --v-purple: #912b8f;      /* ungu atas gradient logo */
+    --v-indigo: #303192;      /* biru-ungu bawah gradient logo */
+    --v-yellow: #fff200;      /* bintang di logo */
+    --v-ink: #000;
+    --v-line: #bdbdbd;
+    --v-wa: #25d366;
+    --v-gradient: linear-gradient(180deg, var(--v-purple) 0%, var(--v-indigo) 100%);
+    --nav-h: 72px;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--v-ink);
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+body:focus { outline: none; }
+
+/* ---------- Navbar ---------- */
+.navbar-versative {
+    background: var(--v-gradient);
+    min-height: var(--nav-h);
+    padding-block: .35rem;
+}
+.brand-logo { height: 62px; width: auto; display: block; }
+
+.navbar-versative .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding-block: .5rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color .2s;
+}
+.navbar-versative .nav-link:hover,
+.navbar-versative .nav-link:focus-visible { color: #fff; border-bottom-color: rgba(255,255,255,.6); }
+.navbar-versative .nav-link.active { color: #fff; border-bottom-color: var(--v-yellow); }
+
+.navbar-toggler {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.55);
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: .2rem .5rem;
+}
+.navbar-toggler:focus { box-shadow: 0 0 0 .2rem rgba(255,255,255,.35); }
+
+@media (max-width: 767.98px) {
+    .navbar-versative .navbar-collapse { padding: .5rem 0 .75rem; }
+    .navbar-versative .nav-link { padding-inline: .25rem; }
+}
+
+/* ---------- Hero ---------- */
+.hero { padding: clamp(2rem, 6vw, 5rem) 0 clamp(3rem, 8vw, 7rem); }
+
+.hero-title {
+    font-weight: 800;
+    font-size: clamp(2.8rem, 8.5vw, 5.75rem);
+    line-height: 1.04;
+    letter-spacing: -.02em;
+    margin-bottom: 1.25rem;
+    max-width: 9ch;
+}
+.hero-lead {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.55;
+    max-width: 34rem;
+    margin-bottom: 0;
+}
+.hero-logo {
+    width: min(100%, 420px);
+    height: auto;
+    filter: drop-shadow(0 18px 28px rgba(48, 49, 146, .28));
+}
+
+@media (max-width: 767.98px) {
+    .hero-logo { width: min(62%, 260px); }
+    .hero-title { max-width: none; }
+}
+
+/* ---------- Section umum ---------- */
+.section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+
+.section-title {
+    font-weight: 800;
+    font-size: clamp(2.4rem, 7vw, 4.75rem);
+    letter-spacing: -.02em;
+    line-height: 1.1;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+#services .section-title { text-align: center; }
+
+.section-gradient { background: var(--v-gradient); }
+
+
+/* ---------- About ---------- */
+.info-card {
+    background: #fff;
+    border: 1px solid #d9d9e6;
+    border-radius: .6rem;
+    padding: clamp(1.1rem, 2.4vw, 1.75rem);
+    font-size: clamp(1rem, 1.35vw, 1.2rem);
+    line-height: 1.4;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+.info-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 .5rem;
+    text-align: left;
+}
+.mission-list { padding-left: 1.4rem; }
+.mission-list li { margin-bottom: .55rem; padding-left: .2rem; }
+.mission-list li:last-child { margin-bottom: 0; }
+
+/* ---------- Services & Pricelist ---------- */
+.svc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #555;
+    border-radius: .75rem;
+    overflow: hidden;
+}
+.svc-card {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.1rem, 2vw, 1.6rem);
+    border-right: 1px solid #555;
+    border-bottom: 1px solid #555;
+    background: #fff;
+    transition: background-color .2s;
+}
+.svc-card:nth-child(3n) { border-right: 0; }
+.svc-card:nth-last-child(-n+3) { border-bottom: 0; }
+.svc-card:hover { background: #faf6fc; }
+
+.svc-title {
+    font-weight: 700;
+    font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+    text-align: center;
+    margin: 0 0 .9rem;
+}
+.svc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    font-size: clamp(.92rem, 1.15vw, 1.05rem);
+    line-height: 1.35;
+}
+.svc-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .75rem;
+    padding: .3rem 0;
+}
+.svc-list li + li:not(.svc-group) { border-top: 1px dashed #dcdce6; }
+.svc-group {
+    display: block !important;
+    font-weight: 600;
+    color: var(--v-indigo);
+    margin-top: .45rem;
+    padding-bottom: .1rem !important;
+}
+.svc-group:first-child { margin-top: 0; }
+.svc-sub .svc-name { padding-left: .6rem; }
+.svc-price { font-weight: 600; white-space: nowrap; text-align: right; }
+.svc-name { min-width: 0; }
+.svc-note { font-size: .85rem; color: #555; margin: -.35rem 0 1rem; }
+.svc-btn {
+    margin-top: auto;
+    align-self: center;
+    width: min(100%, 15rem);
+}
+
+@media (max-width: 991.98px) {
+    .svc-grid { grid-template-columns: repeat(2, 1fr); }
+    .svc-card:nth-child(3n) { border-right: 1px solid #555; }
+    .svc-card:nth-child(2n) { border-right: 0; }
+    .svc-card:nth-last-child(-n+3) { border-bottom: 1px solid #555; }
+    .svc-card:nth-last-child(-n+2) { border-bottom: 0; }
+}
+@media (max-width: 575.98px) {
+    .svc-grid { grid-template-columns: 1fr; }
+    .svc-card, .svc-card:nth-child(n) { border-right: 0; border-bottom: 1px solid #555; }
+    .svc-card:last-child { border-bottom: 0; }
+}
+
+/* ---------- Portfolio ---------- */
+.pf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--v-line);
+    border-radius: .6rem;
+    overflow: hidden;
+}
+
+.pf-card {
+    --pf-a: var(--v-purple);
+    --pf-b: var(--v-indigo);
+    --thumb: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: clamp(210px, 26vw, 330px);
+    padding: clamp(.9rem, 1.8vw, 1.4rem) clamp(.9rem, 1.8vw, 1.4rem) clamp(.9rem, 1.4vw, 1.1rem);
+    color: #fff;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        linear-gradient(180deg, rgba(0,0,0,.10) 35%, rgba(0,0,0,.55) 100%),
+        var(--thumb) center / cover no-repeat,
+        linear-gradient(135deg, var(--pf-a), var(--pf-b));
+}
+.pf-animation    { --pf-a: #f4f4f8; --pf-b: #bfc0d6; color: #1c1c3a; }
+.pf-broadcasting { --pf-a: #7a3a8f; --pf-b: #3a2a6b; }
+.pf-vcd          { --pf-a: #b01f2e; --pf-b: #5c1020; }
+.pf-software     { --pf-a: #1d4f9c; --pf-b: #12275c; }
+.pf-network      { --pf-a: #0f6f6a; --pf-b: #0b2f45; }
+.pf-game         { --pf-a: #2b2f5e; --pf-b: #0c0d1f; }
+
+/* tema terang untuk Animation: overlay gelap dimatikan */
+.pf-animation {
+    background:
+        var(--thumb) center / cover no-repeat,
+        linear-gradient(135deg, var(--pf-a), var(--pf-b));
+}
+
+.pf-icon {
+    position: absolute;
+    right: -.4rem;
+    top: 28%;
+    font-size: clamp(5rem, 11vw, 9rem);
+    line-height: 1;
+    opacity: .16;
+    z-index: -1;
+    transform: rotate(-8deg);
+}
+
+.pf-title {
+    margin: 0;
+    font-weight: 300;
+    font-size: clamp(1.45rem, 3.2vw, 2.4rem);
+    letter-spacing: .01em;
+    line-height: 1.1;
+    text-shadow: 0 1px 8px rgba(0,0,0,.25);
+}
+.pf-animation .pf-title { text-shadow: none; }
+
+.drive-btn {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background: #fff;
+    color: #1f1f1f;
+    text-decoration: none;
+    font-size: clamp(.72rem, 1.05vw, .9rem);
+    font-weight: 500;
+    padding: .5rem .8rem;
+    border-radius: .35rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+    transition: transform .15s, box-shadow .15s;
+}
+.drive-btn:hover,
+.drive-btn:focus-visible {
+    color: #1f1f1f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.32);
+}
+.drive-btn:focus-visible { outline: 3px solid var(--v-yellow); outline-offset: 2px; }
+.drive-ico { width: 1.3em; height: 1.3em; flex: none; }
+
+@media (max-width: 991.98px) {
+    .pf-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 575.98px) {
+    .pf-grid { grid-template-columns: 1fr; }
+    .pf-card { min-height: 190px; }
+}
+
+/* ---------- Contact ---------- */
+.contact-card {
+    border: 1px solid var(--v-line);
+    border-radius: .6rem;
+    padding: clamp(1rem, 2.4vw, 1.75rem);
+}
+.contact-card .form-label {
+    font-size: .95rem;
+    margin-bottom: .2rem;
+}
+.contact-card .form-control {
+    border: 1px solid #8d8d8d;
+    border-radius: .45rem;
+    padding: .55rem .75rem;
+}
+.contact-card .form-control:focus {
+    border-color: var(--v-indigo);
+    box-shadow: 0 0 0 .2rem rgba(48, 49, 146, .2);
+}
+.contact-card textarea.form-control { resize: vertical; min-height: 10rem; }
+
+.btn-wa {
+    background: var(--v-wa);
+    border: 0;
+    color: #fff;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+}
+.btn-wa:hover,
+.btn-wa:focus-visible { background: #1ebe5a; color: #fff; }
+.btn-wa:focus-visible { box-shadow: 0 0 0 .2rem rgba(37, 211, 102, .4); }
+.btn-wa .bi { font-size: 1.25rem; line-height: 1; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+    text-align: center;
+    padding: clamp(1.75rem, 4vw, 2.75rem) 1rem;
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+}
+
+/* ---------- Aksesibilitas ---------- */
+a:focus-visible, button:focus-visible, .form-control:focus-visible {
+    outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; animation: none !important; }
+    .bj-intro, .bj-reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* Teks rata kiri di layar kecil supaya tidak muncul celah antar kata */
+@media (max-width: 575.98px) {
+    .info-card { text-align: left; hyphens: none; -webkit-hyphens: none; }
+}
+
+/* ---------- Sosial media ---------- */
+.social-list {
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem 1.25rem;
+}
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    color: var(--v-ink);
+    text-decoration: none;
+    font-weight: 500;
+}
+.social-link .bi {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--v-gradient);
+    color: #fff;
+    font-size: 1.3rem;
+    transition: transform .25s cubic-bezier(.34, 1.8, .64, 1), box-shadow .2s;
+}
+.social-link:hover .bi,
+.social-link:focus-visible .bi {
+    transform: scale(1.15) rotate(-6deg);
+    box-shadow: 0 6px 16px rgba(48, 49, 146, .35);
+}
+.social-link:hover { color: var(--v-indigo); }
+.social-link:focus-visible { outline: 3px solid var(--v-indigo); outline-offset: 4px; border-radius: 999px; }
+
+/* ---------- Animasi bj-intro-bounce ---------- */
+@keyframes bj-intro-bounce {
+    0%   { opacity: 0; transform: translateY(-60px) scale(.92); }
+    50%  { opacity: 1; transform: translateY(14px) scale(1.02); }
+    70%  { transform: translateY(-8px) scale(.995); }
+    85%  { transform: translateY(4px); }
+    100% { opacity: 1; transform: none; }
+}
+@keyframes bj-logo-bounce {
+    0%   { opacity: 0; transform: translateY(-120px) rotate(-12deg) scale(.7); }
+    45%  { opacity: 1; transform: translateY(0) rotate(6deg) scale(1.06); }
+    62%  { transform: translateY(-26px) rotate(-3deg) scale(1); }
+    80%  { transform: translateY(0) rotate(1.5deg); }
+    92%  { transform: translateY(-6px) rotate(0); }
+    100% { opacity: 1; transform: none; }
+}
+@keyframes bj-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+}
+
+/* Intro hero: jalan sekali saat halaman dibuka */
+.bj-intro {
+    opacity: 0;
+    animation: bj-intro-bounce .95s cubic-bezier(.28, .84, .42, 1) var(--d, 0s) forwards;
+}
+.bj-intro.bj-logo {
+    animation:
+        bj-logo-bounce 1.3s cubic-bezier(.28, .84, .42, 1) .05s forwards,
+        bj-float 4.5s ease-in-out 1.6s infinite;
+}
+
+/* Reveal saat di-scroll: hanya aktif jika JS jalan (class .js di <html>) */
+.js .bj-reveal { opacity: 0; }
+.js .bj-reveal.is-in {
+    animation: bj-intro-bounce .9s cubic-bezier(.28, .84, .42, 1) var(--d, 0s) forwards;
+}
+
+/* CTA WhatsApp di Home */
+.btn-wa-lg {
+    margin-top: 1.5rem;
+    padding: .75rem 1.75rem;
+    font-size: 1.05rem;
+    border-radius: .5rem;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, .35);
+    transition: transform .25s cubic-bezier(.34, 1.8, .64, 1), box-shadow .2s, background-color .2s;
+}
+.btn-wa-lg:hover, .btn-wa-lg:focus-visible { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(37, 211, 102, .45); }
+.btn-wa-lg .bi { font-size: 1.4rem; }
+a.btn-wa { text-decoration: none; }
